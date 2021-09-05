@@ -1,0 +1,29 @@
+ <mvc:View controllerName="de.christopherpielka.DSACharTool.controller.MainView"
+  displayBlock="true"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc">
+  <Shell>
+    <App id="idAppControl" >
+      <pages>
+        <Page title="{i18n>title}">
+          <content>
+            <mvc:XMLView viewName="de.christopherpielka.DSACharTool.view.LevelUp"/>
+          </content>
+          <footer>
+            <OverflowToolbar>
+              <Link
+                text="Source Code"
+                target="_blank"
+                href="https://openui5.org/" />
+                <ToolbarSpacer/>
+              <Link
+                text="Made with OpenUI5"
+                target="_blank"
+                href="https://openui5.org/" />
+            </OverflowToolbar>
+          </footer>
+        </Page>
+      </pages>
+    </App>
+  </Shell>
+</mvc:View>

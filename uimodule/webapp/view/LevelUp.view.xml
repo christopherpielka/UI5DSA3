@@ -1,0 +1,108 @@
+ <mvc:View controllerName="de.christopherpielka.DSACharTool.controller.LevelUp"
+  displayBlock="true"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  xmlns:mvc="sap.ui.core.mvc">
+
+    <Panel id="lvlPanel">
+        <content>
+                    <HBox width="100%">
+
+                        <GenericTile class="tileLayout sapUiTinyMarginBeginEnd sapUiLargeMarginEnd" size="L" header="{i18n>Tries}" press="onAddTry">
+                            <TileContent footer="{i18n>Plus_minus}">
+                                <NumericContent id="tries" value="0" withMargin="false" />
+                            </TileContent>
+                        </GenericTile>
+
+                        <GenericTile class="tileLayout sapUiMediumMarginBegin sapUiTinyMarginBeginEnd" size="L" header="{i18n>Dice1}" press="onReroll1">
+                            <TileContent footer="{i18n>Reroll_desc_one}">
+                                <NumericContent id="roll1" value="1" withMargin="false" />
+                            </TileContent>
+                        </GenericTile>
+
+                        <GenericTile class="tileLayout " size="L" header="{i18n>Dice2}" press="onReroll2">
+                            <TileContent footer="{i18n>Reroll_desc_one}">
+                                <NumericContent id="roll2" value="1" withMargin="false" />
+                            </TileContent>
+                        </GenericTile>
+
+                        <GenericTile class="tileLayout sapUiTinyMarginBeginEnd sapUiSmallMarginEnd" size="L" header="{i18n>Dice3}" press="onReroll3">
+                            <TileContent footer="{i18n>Reroll_desc_one}">
+                                <NumericContent id="roll3" value="1" withMargin="false" />
+                            </TileContent>
+                        </GenericTile>
+
+                        <GenericTile class="tileLayout sapUiTinyMarginBeginEnd sapUiLargeMarginBegin" size="L" header="{i18n>Sum2}" press="onRoll">
+                            <TileContent footer="{i18n>Reroll_desc_all}">
+                                <NumericContent id="rollSum2" icon="sap-icon://sum" value="2" withMargin="false" />
+                            </TileContent>
+                        </GenericTile>
+
+                        <GenericTile class="tileLayout  sapUiSmallMarginEnd" size="L" header="{i18n>Sum3}" press="onRoll">
+                            <TileContent footer="{i18n>Reroll_desc_all}">
+                                <NumericContent id="rollSum3" icon="sap-icon://sum" value="3" withMargin="false" />
+                            </TileContent>
+                        </GenericTile>
+                    </HBox>
+
+                    <Button class="sapUiTinyMarginTop" press="onRoll" text="{i18n>Roll}" width="100%"/>
+                    <Button class="sapUiSmallMarginTop sapUiLargeMarginBottom" type="Reject" press="onReset" text="{i18n>Reset}" width="100%"/>
+
+                    <ScrollContainer>
+                        <Table id="idProductsTable"
+                        inset="false"
+                        items="{
+                            path: '/rolls'
+                        }">
+                        <headerToolbar>
+                            <OverflowToolbar>
+                                <content>
+                                    <Title text="{i18n>ROLL_HIST}"/>
+                                </content>
+                            </OverflowToolbar>
+                        </headerToolbar>
+                        <columns>
+                            <Column>
+                                <Text text="{i18n>Tries}"/>
+                            </Column>
+                            <Column>
+                                <Text text="{i18n>Dice1}" />
+                            </Column>
+                            <Column>
+                                <Text text="{i18n>Dice2}" />
+                            </Column>
+                            <Column>
+                                <Text text="{i18n>Dice3}" />
+                            </Column>
+                            <Column>
+                                <Text text="{i18n>Sum2}" />
+                            </Column>
+                            <Column>
+                                <Text text="{i18n>Sum3}" />
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text
+                                        text="{rollTries}" />
+                                    <Text
+                                    text="{dice1}" />
+                                    <Text
+                                    text="{dice2}" />
+                                    <Text
+                                    text="{dice3}" />
+                                    <Text
+                                    text="{sum2}" />
+                                    <Text
+                                    text="{sum3}" />
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </ScrollContainer>
+
+        </content>
+    </Panel>
+
+</mvc:View>

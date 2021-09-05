@@ -1,0 +1,16 @@
+{
+  "generator-easy-ui5": {
+    "projectname": "DSACharTool",
+    "namespace": "de.christopherpielka",
+    "platform": "Static webserver",
+    "viewtype": "XML",
+    "viewname": "MainView",
+    "ui5libs": "Content delivery network (OpenUI5)",
+    "newdir": false,
+    "namespaceURI": "de/christopherpielka",
+    "uimodules": [
+      "uimodule"
+    ],
+    "setupCompleted": true
+  }
+}
