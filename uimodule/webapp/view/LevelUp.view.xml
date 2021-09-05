@@ -34,13 +34,13 @@
 
                         <GenericTile class="tileLayout sapUiTinyMarginBeginEnd sapUiLargeMarginBegin" size="L" header="{i18n>Sum2}" press="onRoll">
                             <TileContent footer="{i18n>Reroll_desc_all}">
-                                <NumericContent id="rollSum2" icon="sap-icon://sum" value="2" withMargin="false" />
+                                <NumericContent id="rollSum2" value="2" withMargin="false" />
                             </TileContent>
                         </GenericTile>
 
                         <GenericTile class="tileLayout  sapUiSmallMarginEnd" size="L" header="{i18n>Sum3}" press="onRoll">
                             <TileContent footer="{i18n>Reroll_desc_all}">
-                                <NumericContent id="rollSum3" icon="sap-icon://sum" value="3" withMargin="false" />
+                                <NumericContent id="rollSum3" value="3" withMargin="false" />
                             </TileContent>
                         </GenericTile>
                     </HBox>
