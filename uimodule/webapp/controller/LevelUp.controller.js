@@ -123,7 +123,7 @@ sap.ui.define([
         },
 
         onAfterRendering: function() {
-          $(this._oTriesInput.getDomRef()).on('contextmenu', function(){
+          $(this._oTriesInput.getParent().getParent().getDomRef()).on('contextmenu', function(){
             this.updateTriesInput(-1);
             return false;
           }.bind(this));
